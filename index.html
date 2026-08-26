@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Title, meta, favicon, fonts & theme are all injected from config.js by main.js -->
+  <title>Boutique</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="config.js"></script>
+</head>
+<body>
+
+  <!-- ══════════ PRELOADER ══════════ -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-emblem" id="preloader-emblem"></div>
+      <div class="preloader-name" id="preloader-name"></div>
+      <div class="preloader-bar"><span id="preloader-progress"></span></div>
+    </div>
+  </div>
+
+  <!-- ══════════ CUSTOM CURSOR ══════════ -->
+  <div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" class="cursor-ring" aria-hidden="true"><span id="cursor-label"></span></div>
+
+  <!-- ══════════ SCROLL PROGRESS ══════════ -->
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ══════════ NAVIGATION ══════════ -->
+  <header id="site-header" class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" id="nav-brand" class="nav-brand" aria-label="Home"></a>
+      <ul id="nav-links" class="nav-links"></ul>
+      <div class="nav-actions">
+        <a id="nav-whatsapp" class="btn btn-whatsapp nav-whatsapp" href="#" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span>
+        </a>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ══════════ MOBILE MENU ══════════ -->
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-bg"></div>
+    <nav class="mobile-menu-inner" aria-label="Mobile navigation">
+      <ul id="mobile-nav-links" class="mobile-nav-links"></ul>
+      <div class="mobile-menu-footer">
+        <a id="mobile-whatsapp" class="btn btn-whatsapp" href="#" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>Enquire on WhatsApp</span>
+        </a>
+        <div id="mobile-social" class="social-row"></div>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ══════════ HERO ══════════ -->
+    <section id="home" class="hero">
+      <div class="hero-media" id="hero-media">
+        <img id="hero-image" class="hero-image" src="" alt="" fetchpriority="high" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-ornament hero-ornament-1" aria-hidden="true"></div>
+      <div class="hero-ornament hero-ornament-2" aria-hidden="true"></div>
+      <div class="hero-content container">
+        <p id="hero-eyebrow" class="eyebrow hero-eyebrow"></p>
+        <h1 id="hero-title" class="hero-title"></h1>
+        <p id="hero-subtitle" class="hero-subtitle"></p>
+        <div class="hero-cta">
+          <a id="hero-btn-primary" class="btn btn-gold" href="#collection"></a>
+          <a id="hero-btn-secondary" class="btn btn-outline-light" href="#contact"></a>
+        </div>
+        <div id="hero-stats" class="hero-stats"></div>
+      </div>
+      <a href="#collection" class="hero-scroll-hint" aria-label="Scroll to collection">
+        <span class="hero-scroll-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ══════════ MARQUEE RIBBON ══════════ -->
+    <section class="ribbon" aria-hidden="true">
+      <div id="ribbon-track" class="ribbon-track"></div>
+    </section>
+
+    <!-- ══════════ COLLECTION ══════════ -->
+    <section id="collection" class="section section-collection">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">The Collection</p>
+          <h2 class="section-title">Curated for Every Occasion</h2>
+          <div class="gold-divider" aria-hidden="true"></div>
+        </header>
+        <div id="category-filters" class="category-filters" role="tablist" aria-label="Filter products by category"></div>
+        <div id="product-grid" class="product-grid"></div>
+      </div>
+    </section>
+
+    <!-- ══════════ BRIDAL FEATURE ══════════ -->
+    <section id="bridal" class="section section-bridal">
+      <div class="container bridal-layout">
+        <figure class="bridal-media reveal" id="bridal-media">
+          <img id="bridal-image" src="" alt="" loading="lazy" />
+          <div class="frame-ornament" aria-hidden="true"></div>
+        </figure>
+        <div class="bridal-body">
+          <p id="bridal-eyebrow" class="eyebrow eyebrow-gold reveal"></p>
+          <h2 id="bridal-title" class="section-title reveal"></h2>
+          <p id="bridal-description" class="section-text reveal"></p>
+          <ul id="bridal-highlights" class="bridal-highlights reveal"></ul>
+          <a id="bridal-btn" class="btn btn-gold reveal" href="#" target="_blank" rel="noopener"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ ABOUT ══════════ -->
+    <section id="about" class="section section-about">
+      <div class="container about-layout">
+        <div class="about-body">
+          <p id="about-eyebrow" class="eyebrow reveal"></p>
+          <h2 id="about-title" class="section-title reveal"></h2>
+          <blockquote id="about-quote" class="about-quote reveal"></blockquote>
+          <p id="about-description" class="section-text reveal"></p>
+          <ul id="about-points" class="about-points reveal"></ul>
+        </div>
+        <figure class="about-media reveal" id="about-media">
+          <img id="about-image" src="" alt="" loading="lazy" />
+          <div class="frame-ornament" aria-hidden="true"></div>
+          <div id="about-badge" class="about-badge"></div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ══════════ LOOKBOOK ══════════ -->
+    <section id="lookbook" class="section section-lookbook">
+      <div class="container">
+        <header class="section-head reveal">
+          <p id="lookbook-eyebrow" class="eyebrow"></p>
+          <h2 id="lookbook-title" class="section-title"></h2>
+          <div class="gold-divider" aria-hidden="true"></div>
+        </header>
+        <div id="lookbook-grid" class="lookbook-grid"></div>
+      </div>
+    </section>
+
+    <!-- ══════════ OFFER ══════════ -->
+    <section id="offer" class="section section-offer">
+      <div class="offer-bg" id="offer-bg"></div>
+      <div class="container offer-inner">
+        <p id="offer-eyebrow" class="eyebrow eyebrow-gold reveal"></p>
+        <h2 id="offer-title" class="offer-title reveal"></h2>
+        <p id="offer-description" class="section-text offer-text reveal"></p>
+        <p id="offer-highlight" class="offer-highlight reveal"></p>
+        <a id="offer-btn" class="btn btn-gold reveal" href="#collection"></a>
+      </div>
+    </section>
+
+    <!-- ══════════ TESTIMONIALS ══════════ -->
+    <section id="testimonials" class="section section-testimonials">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Client Love</p>
+          <h2 class="section-title">Words From Our Patrons</h2>
+          <div class="gold-divider" aria-hidden="true"></div>
+        </header>
+        <div id="testimonial-track" class="testimonial-track"></div>
+      </div>
+    </section>
+
+    <!-- ══════════ CONTACT ══════════ -->
+    <section id="contact" class="section section-contact">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow eyebrow-gold">Visit Us</p>
+          <h2 class="section-title">The Boutique Awaits</h2>
+          <div class="gold-divider" aria-hidden="true"></div>
+        </header>
+        <div class="contact-layout">
+          <div id="contact-cards" class="contact-cards"></div>
+          <aside class="hours-card reveal" aria-label="Opening hours">
+            <h3 class="hours-title"><i class="fa-regular fa-clock" aria-hidden="true"></i> Opening Hours</h3>
+            <ul id="hours-list" class="hours-list"></ul>
+            <div id="contact-social" class="social-row"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer id="site-footer" class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" id="footer-brand-link" class="footer-logo"></a>
+        <p id="footer-description" class="footer-text"></p>
+        <div id="footer-social" class="social-row"></div>
+      </div>
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h4 class="footer-heading">Explore</h4>
+        <ul id="footer-nav" class="footer-list"></ul>
+      </nav>
+      <div class="footer-col">
+        <h4 class="footer-heading">Collections</h4>
+        <ul id="footer-categories" class="footer-list"></ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Contact</h4>
+        <ul id="footer-contact" class="footer-list footer-contact"></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p id="footer-copyright"></p>
+        <p class="footer-credit">Crafted with <i class="fa-solid fa-heart" aria-hidden="true"></i> in India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════ FLOATING WHATSAPP ══════════ -->
+  <a id="floating-whatsapp" class="floating-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <!-- ══════════ PRODUCT QUICK VIEW MODAL ══════════ -->
+  <div id="quickview" class="quickview" role="dialog" aria-modal="true" aria-labelledby="qv-name" aria-hidden="true">
+    <div class="quickview-backdrop" id="quickview-backdrop"></div>
+    <div class="quickview-panel" id="quickview-panel">
+      <button id="quickview-close" class="quickview-close" aria-label="Close quick view">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <figure class="quickview-media"><img id="qv-image" src="" alt="" /></figure>
+      <div class="quickview-body">
+        <p id="qv-category" class="eyebrow eyebrow-gold"></p>
+        <h3 id="qv-name" class="quickview-name"></h3>
+        <p id="qv-price" class="quickview-price"></p>
+        <p id="qv-description" class="quickview-text"></p>
+        <a id="qv-whatsapp" class="btn btn-whatsapp btn-block" href="#" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>Enquire on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ LIGHTBOX (LOOKBOOK) ══════════ -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close image viewer"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    <button id="lightbox-prev" class="lightbox-nav lightbox-prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+    <img id="lightbox-image" class="lightbox-image" src="" alt="" />
+    <button id="lightbox-next" class="lightbox-nav lightbox-next" aria-label="Next image"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
